@@ -53,6 +53,6 @@ function go_through_rooms() {
 
 go_through_rooms();
 
-server.listen(8200, () => {
+server.listen(process.env.PORT || 8080, () => {
   console.log('Example app listening on port 8080!');
 });
