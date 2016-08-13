@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>AnonChat</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+    <button ion-item (click)="requestPerm()">
+      <ion-icon name="notifications" item-left></ion-icon>
+      Notifications: {{notifyPerm}}
+    </button>
+    <ion-item>
+      <ion-icon name="pulse" item-left></ion-icon>
+      <ion-label>Vibrate</ion-label>
+      <ion-toggle [ngModel]="checked" (ngModelChange)="noVibrate($event)"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>AnonChat</ion-title>
+    <ion-buttons id="iosNew" end>
+      <button (click)="newRoom()">
+        New
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page1">
+  <ion-list>
+    <button ion-item (click)="startChatting(room.name)" *ngFor="let room of rooms">
+        <h2>{{room.name}}</h2>   
+        <p>{{room.desc}}</p>
+    </button>
+  </ion-list>
+
+  <button id="fabButton" secondary (click)="newRoom()" fab fab-bottom fab-right fab-fixed>
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-content>
